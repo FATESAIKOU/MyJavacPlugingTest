@@ -31,7 +31,8 @@ echo ""
 echo "=========================================="
 echo "Step 4: 使用插件編譯 HelloWorld"
 echo "=========================================="
-javac -processorpath plugin-out -Xplugin:MyPlugin -d out src/HelloWorld.java
+javac -processorpath plugin-out '-Xplugin:MyPlugin -Xmp:Verbose:OFF -Xmp:ShowPhases:ON -Xmp:ShowMethods:ON -Xmp:ShowF
+ields:OFF -Xmp:Prefix:[AUDIT]' -d out src/HelloWorld.java
 
 echo ""
 echo "=========================================="
